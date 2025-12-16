@@ -2,14 +2,21 @@
 <section class="info-translate ">
   <div class="container">
 
-<label class="switch" aria-label="Toggle setting" (click)="swapText()">
-  <input type="checkbox" aria-checked="false" />
-  <span class="slider" aria-hidden="true">
-    <svg class="slider-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation">
-      <path fill="none" d="m4 16.5 8 8 16-16"></path>
-    </svg>
-  </span>
-</label>
+
+
+
+    
+    <div class="btn-swap">
+      <label class="switch" aria-label="Toggle setting" (click)="swapText()">
+        <input type="checkbox" aria-checked="false" />
+        <span class="slider" aria-hidden="true">
+          <svg class="slider-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+            role="presentation">
+            <path fill="none" d="m4 16.5 8 8 16-16"></path>
+          </svg>
+        </span>
+      </label>
+    </div>
 
 
 
@@ -23,7 +30,8 @@
 
           <div class="col-lg-6 col-sm-12 col-md-6">
             <div class="form-info-translate">
-              <textarea class="form-control" formControlName="text" placeholder="Enter the text you want to translate here"></textarea>
+              <textarea class="form-control" formControlName="text"
+                placeholder="Enter the text you want to translate here"></textarea>
             </div>
           </div>
 
@@ -34,9 +42,9 @@
               <select formControlName="targetLanguage">
 
 
-<option value="" disabled selected>
-    Select language
-  </option>
+                <option value="" disabled selected>
+                  Select language
+                </option>
                 @for (lang of languages(); track $index) {
                 <option [value]="lang">
                   {{ lang }}

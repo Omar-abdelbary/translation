@@ -51,10 +51,10 @@ ngOnInit(): void {
 
     },
 
-    error:(err:HttpErrorResponse)=>{
-      console.log(err);
+    // error:(err:HttpErrorResponse)=>{
+    //   console.log(err);
 
-    }
+    // }
   })
 
 
@@ -88,11 +88,11 @@ listenToTranslateChanges() {
        this.outputText.set(res);
       this._ToastrService.success('Translation successful', 'Trtanslated');
     },
-    error: (err:HttpErrorResponse) => {
-      console.log(err);
+    // error: (err:HttpErrorResponse) => {
+    //   console.log(err);
 
-      this._ToastrService.error('Translation failed', 'Error');
-    }
+    //   this._ToastrService.error('Translation failed', 'Error');
+    // }
   });
 }
 
